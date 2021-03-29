@@ -23,8 +23,10 @@ apt-get install r-base
 # apt-get install make gcc gcc-c++ libcurl-devel libxml2-devel openssl-devel texlive-*
 -----
 MySQL 8 Installation
-wget https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm
-sudo rpm -ivh mysql80-community-release-el8-1.noarch.rpm
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
+dpkg -i mysql-apt-config*
+# select defaults and "ok"
+apt-get update
 sudo apt-get install mysql-server
 sudo systemctl start mysqld
 sudo systemctl status mysqld
@@ -35,7 +37,7 @@ mysqladmin -u root -p version
 root pass: TVWS}G6vW*e*
 -----
 Java Installation
-sudo apt-get install java-11-openjdk-devel
+sudo apt-get install openjdk-11-jdk
 -----
 Python Installation
 sudo apt-get install python3
