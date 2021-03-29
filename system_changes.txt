@@ -12,9 +12,14 @@ sudo apt-get install screen
 sudo apt-get install wget bzip2 tar
 ---
 R installation
-sudo apt-get install dirmngr apt-transport-https ca-certificates software-properties-common gnupg2
-sudo apt-get install R
-sudo apt-get install make gcc gcc-c++ libcurl-devel libxml2-devel openssl-devel texlive-*
+#install dependencies
+apt-get install dirmngr apt-transport-https ca-certificates software-properties-common gnupg2
+# install the keys
+apt-key adv --keyserver keys.gnupg.net --recv-key 'E19F5F87128899B192B1A2C2AD5F960A256A04AF'
+add-apt-repository 'deb https://cloud.r-project.org/bin/linux/debian buster-cran35/'
+# install R
+apt-get install R
+apt-get install make gcc gcc-c++ libcurl-devel libxml2-devel openssl-devel texlive-*
 -----
 MySQL 8 Installation
 wget https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm
